@@ -1,5 +1,6 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/core";
+  import { Button } from "$lib/components/ui/button"
 
   let name = $state("");
   let greetMsg = $state("");
@@ -29,7 +30,7 @@
 
   <form class="row" onsubmit={greet}>
     <input id="greet-input" placeholder="Enter a name..." bind:value={name} />
-    <button type="submit">Greet</button>
+    <Button type="submit">Greet</Button>
   </form>
   <p>{greetMsg}</p>
 </main>
